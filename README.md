@@ -1,61 +1,95 @@
-# Welcome to React Router!
+# ✈️ Airline Booking System
 
-A modern, production-ready template for building full-stack React applications using React Router.
+Sistema de reservas de vuelos con funcionalidad de cupones de descuento y checkout integrado.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## 🚀 Características
 
-## Features
+- **Checkout Interactivo**: Página de checkout completa con resumen de precios
+- **Sistema de Cupones**: Validación de códigos de descuento en tiempo real
+- **UI Moderna**: Interfaz responsive con TailwindCSS
+- **TypeScript**: Tipado completo para mayor seguridad
+- **React Router 7**: Navegación y SSR optimizado
+- **Hot Module Replacement**: Desarrollo rápido con HMR
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## 🎟️ Cupones Disponibles
 
-## Getting Started
+| Código | Descuento |
+|--------|-----------|
+| `SAVE10` | 10% |
+| `SAVE20` | 20% |
+| `SUMMER25` | 25% |
+| `WELCOME15` | 15% |
 
-### Installation
+## 🛠️ Instalación
 
-Install the dependencies:
+Instalar dependencias:
 
 ```bash
 npm install
 ```
 
-### Development
+## 💻 Desarrollo
 
-Start the development server with HMR:
+Iniciar servidor de desarrollo:
 
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+La aplicación estará disponible en `http://localhost:5173`.
 
-## Building for Production
+### Rutas Disponibles
 
-Create a production build:
+- `/` - Página principal
+- `/checkout` - Página de checkout con cupones
+
+## 🏗️ Build para Producción
+
+Crear build de producción:
 
 ```bash
 npm run build
 ```
 
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
+Iniciar servidor de producción:
 
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+npm start
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+## 📦 Estructura del Proyecto
+
+```
+airline-proj/
+├── app/
+│   ├── routes/
+│   │   ├── home.tsx          # Página principal
+│   │   └── checkout.tsx      # Página de checkout
+│   ├── welcome/
+│   │   └── welcome.tsx       # Componente de bienvenida
+│   ├── root.tsx              # Layout principal
+│   ├── routes.ts             # Configuración de rutas
+│   └── app.css               # Estilos globales
+├── public/                   # Assets estáticos
+├── build/                    # Build de producción
+└── Dockerfile               # Configuración Docker
+```
+
+## 🐳 Deployment con Docker
+
+Construir imagen:
+
+```bash
+docker build -t airline-app .
+```
+
+Ejecutar contenedor:
+
+```bash
+docker run -p 3000:3000 airline-app
+```
+
+### Plataformas Compatibles
 
 - AWS ECS
 - Google Cloud Run
@@ -64,24 +98,23 @@ The containerized application can be deployed to any platform that supports Dock
 - Fly.io
 - Railway
 
-### DIY Deployment
+## 🎨 Tecnologías
 
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
+- **Frontend**: React 19, React Router 7
+- **Styling**: TailwindCSS 4
+- **Backend**: Node.js, React Router Server
+- **Build**: Vite 7
+- **Language**: TypeScript 5
 
-Make sure to deploy the output of `npm run build`
+## 📝 Scripts Disponibles
 
+```bash
+npm run dev        # Servidor de desarrollo
+npm run build      # Build de producción
+npm start          # Servidor de producción
+npm run typecheck  # Verificación de tipos
 ```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
 
 ---
 
-Built with ❤️ using React Router.
+Desarrollado con ❤️ usando React Router
