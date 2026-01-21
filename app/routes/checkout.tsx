@@ -80,7 +80,7 @@ export default function CheckoutPage() {
                       onChange={(e) => setCouponCode(e.target.value)}
                       onKeyPress={(e) => e.key === 'Enter' && handleValidateCoupon()}
                       placeholder="Ingresa tu código"
-                      className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                      className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all bg-white text-gray-900 placeholder:text-gray-400"
                     />
                     <button
                       onClick={handleValidateCoupon}
@@ -101,11 +101,11 @@ export default function CheckoutPage() {
 
                   <div className="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
                     <p className="text-sm text-blue-800 font-medium mb-2">Cupones disponibles:</p>
-                    <div className="grid grid-cols-2 gap-2 text-xs text-blue-700">
-                      <span className="font-mono bg-white px-2 py-1 rounded">SAVE10 (10%)</span>
-                      <span className="font-mono bg-white px-2 py-1 rounded">SAVE20 (20%)</span>
-                      <span className="font-mono bg-white px-2 py-1 rounded">SUMMER25 (25%)</span>
-                      <span className="font-mono bg-white px-2 py-1 rounded">WELCOME15 (15%)</span>
+                    <div className="grid grid-cols-2 gap-2 text-xs">
+                      <span className="font-mono bg-white text-blue-700 px-2 py-1 rounded border border-blue-200">SAVE10 (10%)</span>
+                      <span className="font-mono bg-white text-blue-700 px-2 py-1 rounded border border-blue-200">SAVE20 (20%)</span>
+                      <span className="font-mono bg-white text-blue-700 px-2 py-1 rounded border border-blue-200">SUMMER25 (25%)</span>
+                      <span className="font-mono bg-white text-blue-700 px-2 py-1 rounded border border-blue-200">WELCOME15 (15%)</span>
                     </div>
                   </div>
                 </div>
